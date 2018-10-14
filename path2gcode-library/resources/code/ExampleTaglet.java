@@ -44,7 +44,7 @@ import java.io.*;
  * A sample Taglet representing @example. This tag can be used in any kind of
  * {@link com.sun.javadoc.Doc}.  It is not an inline tag. The text is displayed
  * in yellow to remind the developer to perform a task.  For
- * example, "@example Hello" would be shown as:
+ * example, "@example Path2GCode" would be shown as:
  * <DL>
  * <DT>
  * <B>To Do:</B>

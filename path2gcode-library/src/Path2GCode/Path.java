@@ -2,7 +2,6 @@ package Path2GCode.library;
 
 import java.util.ArrayList;
 import processing.core.*;
-import Jama.*;
 
 class Path {
   protected PMatrix matrix = new PMatrix2D();

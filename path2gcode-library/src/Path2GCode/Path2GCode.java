@@ -11,7 +11,7 @@ import processing.core.*;
  * (the tag example followed by the name of an example included in folder 'examples' will
  * automatically include the example in the javadoc.)
  *
- * @example Hello 
+ * @example Path2GCode 
  */
 
 public class Path2GCode {
@@ -26,8 +26,8 @@ public class Path2GCode {
 	 * a Constructor, usually called in the setup() method in your sketch to
 	 * initialize and start the Library.
 	 * 
-	 * @example Hello
-	 * @param theParent
+	 * @example Path2GCode
+	 * @param theParent - myParent is a reference to the parent sketch
 	 */
 	public Path2GCode(PApplet theParent) {
 		myParent = theParent;
