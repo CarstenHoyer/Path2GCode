@@ -2,7 +2,7 @@ package Path2GCode.library;
 
 import processing.core.*;
 
-class Drawer {
+public class Drawer {
   Processor processor;
   Device device;
   PApplet ctx;
@@ -20,7 +20,7 @@ class Drawer {
   boolean zoom_in, zoom_out, pan_up, pan_down, pan_left, pan_right;
   float scale;
 
-  Drawer(Processor t_processor, Device t_device, PApplet t_ctx) {
+  public Drawer(Processor t_processor, Device t_device, PApplet t_ctx) {
     processor = t_processor;
     device = t_device;
     ctx = t_ctx;
@@ -42,31 +42,31 @@ class Drawer {
      device_y = (height - device_scaled_height) / 2;*/
   }
 
-  void zoomIn(boolean toggle) {
+  public void zoomIn(boolean toggle) {
     zoom_in = toggle;
   }
 
-  void zoomOut(boolean toggle) {
+  public void zoomOut(boolean toggle) {
     zoom_out = toggle;
   }
 
-  void panUp(boolean toggle) {
+  public void panUp(boolean toggle) {
     pan_up = toggle;
   }
 
-  void panDown(boolean toggle) {
+  public void panDown(boolean toggle) {
     pan_down = toggle;
   }
 
-  void panRight(boolean toggle) {
+  public void panRight(boolean toggle) {
     pan_right = toggle;
   }
 
-  void panLeft(boolean toggle) {
+  public void panLeft(boolean toggle) {
     pan_left = toggle;
   }
 
-  void zoomAndPan() {
+  public void zoomAndPan() {
     if (zoom_out) {
       zoom -= 0.03;
     }
@@ -87,7 +87,7 @@ class Drawer {
     }
   }
 
-  void display() {
+  public void display() {
     setDefaultZoomAndPan();
     zoomAndPan();
     ctx.translate(ctx.width / 2, ctx.height / 2, 0);

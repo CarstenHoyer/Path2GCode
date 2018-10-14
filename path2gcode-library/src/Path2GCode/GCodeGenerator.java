@@ -4,7 +4,7 @@ import processing.core.*;
 import java.util.ArrayList;
 import static java.lang.System.out;
 
-class GcodeGenerator {
+public class GcodeGenerator {
   
   ArrayList<String> gcode;
   Device printer;
@@ -12,14 +12,14 @@ class GcodeGenerator {
   Processor processor;
   PApplet ctx;
   
-  GcodeGenerator(Device t_printer, Settings t_settings, Processor t_processor, PApplet t_ctx) {
+  public GcodeGenerator(Device t_printer, Settings t_settings, Processor t_processor, PApplet t_ctx) {
     printer = t_printer;
     settings = t_settings;
     processor = t_processor;
     ctx = t_ctx;
   }
   
-  GcodeGenerator generate() {
+  public GcodeGenerator generate() {
     gcode = new ArrayList<String>();
     startPrint();
     for (Path path : processor.paths) {
@@ -60,7 +60,7 @@ class GcodeGenerator {
     write("G28");
   }
   
-  void export() {
+  public void export() {
     //Create a unique name for the exported file
     String name_save = "gcode_"+PApplet.day()+""+PApplet.hour()+""+PApplet.minute()+"_"+PApplet.second()+".g";
     //Convert from ArrayList to array (required by saveString function)

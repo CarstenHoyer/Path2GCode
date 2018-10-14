@@ -2,11 +2,11 @@ package Path2GCode.library;
 
 import java.util.ArrayList;
 
-class Creator {
+public class Creator {
   ArrayList<Path> paths = new ArrayList<Path>();
   Device printer;
   Settings settings;
-  Creator(Device t_printer, Settings t_settings) {
+  public Creator(Device t_printer, Settings t_settings) {
     printer = t_printer;
     settings = t_settings;
   }

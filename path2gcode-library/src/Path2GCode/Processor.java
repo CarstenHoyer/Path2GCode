@@ -2,22 +2,22 @@ package Path2GCode.library;
 
 import java.util.ArrayList;
 
-class Processor {
+public class Processor {
   ArrayList<Creator> objects = new ArrayList<Creator>();
   ArrayList<Canvas> canvases = new ArrayList<Canvas>();
   ArrayList<Path> paths;
   
-  Processor addObject(Creator object) {
+  public Processor addObject(Creator object) {
     objects.add(object);
     return this;
   }
   
-  Processor addCanvas(Canvas canvas) {
+  public Processor addCanvas(Canvas canvas) {
     canvases.add(canvas);
     return this;
   }
   
-  void sortPaths() {
+  public void sortPaths() {
     paths = new ArrayList<Path>();
     for (int j = 0; j < objects.size(); j++) {
       Creator obj = objects.get(j);

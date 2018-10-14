@@ -3,18 +3,18 @@ package Path2GCode.library;
 import java.util.ArrayList;
 import processing.core.*;
 
-class Path {
+public class Path {
   protected PMatrix matrix = new PMatrix2D();
   ArrayList<PVector> vertices;
-  Path() {
+  public Path() {
     vertices = new ArrayList<PVector>();
   }
 
-  void add(PVector p) {
+  public void add(PVector p) {
     vertices.add(p);
   }
 
-  void rotate(float angle, float c_x, float c_y, float length_side_cube) {
+  public void rotate(float angle, float c_x, float c_y, float length_side_cube) {
     PVector center = getCenter();
     matrix.translate(c_x + length_side_cube / 2, c_y + length_side_cube / 2);
     matrix.rotate(PApplet.radians(angle));
@@ -27,7 +27,7 @@ class Path {
     vertices = rotatedPath;
   }
  
-  PVector getCenter() {
+  public PVector getCenter() {
     float mean_X = 0, mean_Y = 0;
     for (PVector p : vertices) {
       mean_X += p.x;
