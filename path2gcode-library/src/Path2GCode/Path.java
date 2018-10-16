@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import processing.core.*;
 
 public class Path {
-  protected PMatrix matrix = new PMatrix2D();
+  protected PMatrix2D matrix = new PMatrix2D();
   ArrayList<PVector> vertices;
   public Path() {
     vertices = new ArrayList<PVector>();
@@ -14,11 +14,11 @@ public class Path {
     vertices.add(p);
   }
 
-  public void rotate(float angle, float c_x, float c_y, float length_side_cube) {
-    PVector center = getCenter();
-    matrix.translate(c_x + length_side_cube / 2, c_y + length_side_cube / 2);
+  public void rotate(float angle, float c_x, float c_y) {
+    matrix.translate(c_x, c_y);
+    matrix.print();
     matrix.rotate(PApplet.radians(angle));
-    matrix.translate(-1 * (c_x + length_side_cube / 2), -1 * (c_y + length_side_cube / 2));
+    matrix.translate(-1 * c_x, -1 * c_y);
     ArrayList<PVector> rotatedPath = new ArrayList<PVector>();
     for (int i = 0; i < vertices.size(); i++) {
       PVector rotated = matrix.mult(vertices.get(i), null);
